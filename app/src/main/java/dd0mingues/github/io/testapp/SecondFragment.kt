@@ -5,14 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.navigation.fragment.findNavController
 import dd0mingues.github.io.testapp.databinding.FragmentSecondBinding
-import android.content.Context
-import android.view.MotionEvent
-import android.view.inputmethod.InputMethodManager
-import android.widget.EditText
-import android.widget.RelativeLayout
-import com.google.android.material.internal.ViewUtils.hideKeyboard
 
 
 /**
@@ -38,6 +33,26 @@ class SecondFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val p1name: EditText = binding.p1name
+
+        p1name.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                p1name.hint = ""
+            } else {
+                p1name.hint = "Player 1"
+            }
+        }
+
+        val p2name: EditText = binding.p2name
+
+        p2name.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                p2name.hint = ""
+            } else {
+                p1name.hint = "Player 2"
+            }
+        }
 
         binding.buttonSecond.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
