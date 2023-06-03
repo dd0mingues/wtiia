@@ -23,9 +23,9 @@
 
     <ImageView
         android:id="@+id/playButton"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="90dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="50dp"
         android:contentDescription="@string/play"
         android:scaleX="1.3"
         android:src="@drawable/play"

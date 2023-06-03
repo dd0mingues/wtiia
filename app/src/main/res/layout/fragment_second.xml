@@ -56,18 +56,6 @@
         app:layout_constraintTop_toBottomOf="@id/guideline"
         app:tint="@color/player2" />
 
-    <ImageView
-        android:id="@+id/buttonSecond"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:contentDescription="@string/action_settings"
-        android:src="@drawable/settings_wheel"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/font_color" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
@@ -96,4 +84,15 @@
         app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonTop" />
+
+    <ImageView
+        android:id="@+id/playButton"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:contentDescription="@string/play"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

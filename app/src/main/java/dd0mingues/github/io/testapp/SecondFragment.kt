@@ -15,6 +15,11 @@ import dd0mingues.github.io.testapp.databinding.FragmentSecondBinding
  */
 class SecondFragment : Fragment() {
 
+    companion object {
+        var player1Name: String = ""
+        var player2Name: String = ""
+    }
+
     private var _binding: FragmentSecondBinding? = null
 
     // This property is only valid between onCreateView and
@@ -25,8 +30,11 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         _binding = FragmentSecondBinding.inflate(inflater, container, false)
+
+        binding.p1name.setText(player1Name)
+        binding.p2name.setText(player2Name)
+
         return binding.root
 
     }
@@ -35,26 +43,26 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val p1name: EditText = binding.p1name
-
         p1name.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
                 p1name.hint = ""
             } else {
                 p1name.hint = "Player 1"
+                player1Name = p1name.text.toString()
             }
         }
 
         val p2name: EditText = binding.p2name
-
         p2name.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
                 p2name.hint = ""
             } else {
                 p1name.hint = "Player 2"
+                player2Name = p2name.text.toString()
             }
         }
 
-        binding.buttonSecond.setOnClickListener {
+        binding.playButton.setOnClickListener {
             findNavController().navigate(R.id.action_SecondFragment_to_FirstFragment)
         }
     }
@@ -63,6 +71,4 @@ class SecondFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-    //testing, attention please
 }
