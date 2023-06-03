@@ -63,4 +63,6 @@ class SecondFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    //testing, attention please
 }
