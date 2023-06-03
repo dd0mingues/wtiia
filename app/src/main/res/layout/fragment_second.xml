@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+    <ImageView
+        android:id="@+id/buttonTop"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginBottom="2dp"
+        android:contentDescription="@string/button_top"
+        android:src="@drawable/bigbutton"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/player1" />
+
+    <EditText
+        android:id="@+id/p2name"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="125dp"
+        android:autofillHints="name"
+        android:background="#00FFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/name_player_2"
+        android:inputType="textPersonName"
+        android:rotationX="180"
+        android:rotationY="180"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="48sp"
+        android:textStyle="normal"
+        android:translationZ="90dp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonTop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/buttonBottom"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="2dp"
+        android:contentDescription="@string/button_bottom"
+        android:rotationX="180"
+        android:src="@drawable/bigbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:tint="@color/player2" />
+
+    <ImageView
+        android:id="@+id/buttonSecond"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/action_settings"
+        android:src="@drawable/settings_wheel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/font_color" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <EditText
+        android:id="@+id/p1name"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:autofillHints="name"
+        android:background="#00FFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/bebas_neue"
+        android:hint="@string/name_player_1"
+        android:inputType="textPersonName"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="@color/p2color"
+        android:textColorHint="@color/p2color"
+        android:textSize="48sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonTop" />
+</androidx.constraintlayout.widget.ConstraintLayout>
